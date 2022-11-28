@@ -19,4 +19,5 @@ for checking the output result you can run the [output_tester](https://git.ims-a
 
 
 ![](Images/kNN_Algorithm.png)
+Source: A. Milioto, I. Vizzo, J. Behley and C. Stachniss, "RangeNet ++: Fast and Accurate LiDAR Semantic Segmentation," 2019 IEEE/RSJ International.
 
