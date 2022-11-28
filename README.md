@@ -17,3 +17,6 @@ make release
 
 for checking the output result you can run the [output_tester](https://git.ims-as.uni-hannover.de/renke/salsanext-postprocessing-vpro/-/blob/karimi-main-patch-24309/vpor_post_pro/vpro/knn_post_pro/data/output_tester.ipynb)
 
+
+![](Images/kNN_Algorithm.png)
+
