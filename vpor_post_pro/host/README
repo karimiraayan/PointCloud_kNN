@@ -1,0 +1,5 @@
+VPRO host software application folder.
+
+There should be a matching sw folder in the sw/vpro/ folder (except for helper/aux functions).
+
+Always use the according VPRO/HOST applications together!

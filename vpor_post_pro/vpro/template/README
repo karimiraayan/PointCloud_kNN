@@ -1,0 +1,68 @@
+##
+# PROGRAM
+##
+
+.cpp files are stored in sources/ 
+.h files are stored in includes/
+
+
+main.cpp includes 
+    main-function (c-style returns int...)
+    #include simulator headers
+    calls vpro functions (-> from simulator headers)
+    performs maybe the verification of vpro's execution 
+        (e.g. in a check funuction with some reference code)
+        
+includes/defines.h
+    sets defines for execution of different functions 
+    constants..
+
+includes/helper.h  & sources/helper.cpp
+    some helper functions, like print of a progressbar/print int as bit
+
+
+
+
+##
+# Simulator Init/Exit
+##
+
+init/init.sh
+    script called to convert input data, etc. (e.g. creation of a binary input file from image)
+
+init/input.cfg
+    data loaded into MM by simulator (before start of void main(), the simulator init uses this configuration file to initialize specific MM regions with content)
+
+exit/exit.sh
+    script called to convert output data, etc. (e.g. postprocessing/visualization/verify)
+
+exit/output.cfg
+    data stored from MM by simulator (after simulator return, regions of the MM can be written out into binary files, e.g. for postprocessing/...)
+
+
+
+
+
+##
+# MISC
+##
+
+CmakeLists.txt (always copied from ../ref_cmakelists.txt by Makefile) => DO NOT EDIT
+CmakeListsAdd.txt 
+    modifications for this programm => feel free to edit
+Makefile
+    settings for HW configuration. Used to compile and execute programm
+
+data/
+    folder for input/output files (used by input.cfg/output.cfg scripts)
+
+lib/
+    folder to store external libs (.so)
+    used in CMakeList to link against
+    librarys to compile agains can be placed under /lib (e.g. library for a reference implementation using tensorflow...)
+
+scripts/
+    folder with scripts for parallel compile/run to evaluate different HW configurations
+    should use /localtemp to avoid data traffic on current mounted folder
+    
+    
